@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="form.css" type="text/css">
+    <script type="text/javascript">
+        function fnameValidation(){
+            var reg = /[A-Za-z]{2,}/ ; 
+            var firstNameValue = document.getElementById("fname").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("fnameFeed").style.color="green";
+                document.getElementById("fnameFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("fnameFeed").style.color="red";
+                document.getElementById("fnameFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+        }
+         function lnameValidation(){
+            var reg =/[A-Za-z]{2,}/ ; 
+            var firstNameValue = document.getElementById("lname").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("lnameFeed").style.color="green";
+                document.getElementById("lnameFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("lnameFeed").style.color="red";
+                document.getElementById("lnameFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+          
+
+        }
+
+        function pswValidation(){
+            var reg = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/g ; 
+            var firstNameValue = document.getElementById("psw").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("pswFeed").style.color="green";
+                document.getElementById("pswFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("pswFeed").style.color="red";
+                document.getElementById("pswFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+          
+
+        }
+
+        function numValidation(){
+            var reg = /(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})/g ; 
+            var firstNameValue = document.getElementById("num").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("numFeed").style.color="green";
+                document.getElementById("numFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("numFeed").style.color="red";
+                document.getElementById("numFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+          
+
+        }
+
+        function dateValidation(){
+            var reg = /^(0?[1-9]|1[0-2])[\/](0?[1-9]|[12]\d|3[01])[\/](19|20)\d{2}$/ ; 
+            var firstNameValue = document.getElementById("date").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("dateFeed").style.color="green";
+                document.getElementById("dateFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("dateFeed").style.color="red";
+                document.getElementById("dateFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+        }
+
+        function emailValidation(){
+            var reg = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/ ; 
+            var firstNameValue = document.getElementById("email").value;
+            if (reg.test(firstNameValue))
+            {
+                document.getElementById("emailFeed").style.color="green";
+                document.getElementById("emailFeed").innerHTML="<strong>well done! &#128525;</strong>";
+                  
+            }
+            else
+            {
+                document.getElementById("emailFeed").style.color="red";
+                document.getElementById("emailFeed").innerHTML="<strong>not valid &#128543;</strong>";
+               
+            }
+          
+
+        }
+    </script>
+</head>
+<body>
+    <div class="form" >
+    <form action="" class="formContent" >
+        <h1 id="heading">User information</h1>
+        <label for="fname">Enter your first name:</label><br>
+        <input type="text" id="fname" name="fname" onblur="fnameValidation();" placeholder="at least two chara.."><span id="fnameFeed"></span><br>
+        <label for="lname">Enter your last name:</label><br>
+        <input type="text" id="lname" name="lname" onblur="lnameValidation();" placeholder="at least two chara.."><span id="lnameFeed"></span><br>
+        <label for="psw">Enter your password:</label><br>
+        <input type="password" id="psw" name="password" onblur="pswValidation();"placeholder="Vishal#mau@kj456"><span id="pswFeed" ></span><br>
+        <label for="num">Enter your number:</label><br>
+        <input type="number" id="num" name="number" onblur="numValidation();" placeholder="only 10 digits"><span id="numFeed"></span><br>
+        <label for="date">Enter your DOB:</label><br>
+        <input type="date" id="date" name="date" onblur="dateValidation"><span id="dateFeed" ></span><br>
+        <label for="email">Enter email:</label><br>
+        <input type="text" id="email" name="email" onblur="emailValidation();" placeholder="vishal@gmail.com" ><span id="emailFeed" ></span><br>
+        
+        <button type="button" >submit:</button>
+       
+        
+       
+        
+    
+    </form>
+</div>
+</body>
+</html>

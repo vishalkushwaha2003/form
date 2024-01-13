@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.formContent{
+    
+    border: 1px solid rgba(249, 136, 204, 0.455);
+    height: 90vh;
+    border-radius: 10px;
+    width: 30vw;
+    text-align: left;
+    box-shadow: 2px 2px 6px 10px rgba(255, 192, 203, 0.111);
+    transition: 0.4s;
+}  
+.formContent:hover{
+    scale: 1.04;
+    box-shadow: 1px 1px 12px 10px rgba(237, 164, 188, 0.306);
+    background-color: rgba(255, 192, 203, 0.118);
+}
+  
+  h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(105, 50, 68);
+    font-weight: 900;
+  }
+ 
+  .formContent>span {
+    margin-left:0;
+  } 
+
+.formContent>input ,label,span{
+    
+    margin: 10px;
+    margin-left: 100px;
+  
+}
+
+label{
+    border: 1px solid rgba(251, 174, 233, 0.48);
+    background-color: rgba(238, 224, 227, 0.093);
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 15px;
+    box-shadow: 1px 1px 4px 1px rgba(244, 128, 167, 0.267);
+    margin-top: 10px;
+    color:rgb(239, 100, 197);
+    /* font-weight: 500; */
+    /* text-shadow: 2px 2px 3px rgb(236, 108, 130); */
+    
+    
+}
+input{
+     margin: 0;
+     margin-top:8px;
+     border: 0.5px solid palevioletred;
+     border-radius: 10px;
+     padding: 2px;
+     padding-left:10px ;
+     transition: 0.4s;
+
+
+     
+     
+}
+
+input:hover{
+    scale: 1.1;
+    box-shadow: 1px 1px 5px 3px rgba(236, 181, 200, 0.366);
+}
+/* .button{
+    
+    justify-content: center;
+    background-color: blue;
+    
+} */
+button{
+    background-color:rgba(244, 182, 220, 0.226);
+    border: 0.1px solid rgba(248, 10, 93, 0.643);
+    translate: 330px ;
+    border-radius: 8px;
+    padding: 3px;
+    display: flex;
+    box-shadow: 1px 1px 3px 3px rgba(255, 192, 203, 0.226);
+    
+    transition: 0.3s;
+}
+button:hover{
+    box-shadow: 1px 1px 5px 5px rgba(244, 178, 189, 0.366);
+    background-color:rgba(252, 29, 125, 0.292);
+    scale: 1.09;
+    font-weight: 500;
+}
