@@ -115,11 +115,51 @@
           
 
         }
+          
+        function javaScriptValidation(){
+                 var input1=document.getElementById("fname").value;
+                 var input2=document.getElementById("lname").value;
+                 var input3=document.getElementById("psw").value;
+                 var input4=document.getElementById("psw1").value;
+                 var input5=document.getElementById("num").value;
+                 var input6=document.getElementById("date").value;
+                 var input7=document.getElementById("email").value;
+                 console.log("dfgadfasf");
+                  
+                 if(input1==""){ alert("Please fill the first name");}
+                 else if(input2==""){ alert("Please fill the last name");}
+                 else if(input3==""){ alert("Please fill the password name");}
+                 else if(input4==""){ alert("Please fill the re-enter password");}
+                 else if(input5==""){ alert("Please fill the number");}
+                 else if(input6==""){ alert("Please fill the date");}
+                 else if(input7==""){ alert("Please fill the email");}
+                 else{
+                    alert("Please conform to submit");
+                 }
+
+
+                 
+
+        }
+
+        function psw1Validation(){
+            var firstNameValue = document.getElementById("psw").value;
+            var psw1=document.getElementById("psw1").value;
+            console.log(psw1,firstNameValue);
+            if( firstNameValue==psw1){
+                document.getElementById("psw1Feed").style.color="green";
+                document.getElementById("psw1Feed").innerHTML="<strong>correct &#128077</strong>";
+            }
+            else{
+                document.getElementById("psw1Feed").style.color="red";
+                document.getElementById("psw1Feed").innerHTML="<strong>don,t match &#128545</strong>";
+            }
+        }
     </script>
 </head>
 <body>
     <div class="form" >
-    <form action="" class="formContent" >
+    <form action="" class="formContent" onsubmit="javaScriptValidation();">
         <h1 id="heading">User information</h1>
         <label for="fname">Enter your first name:</label><br>
         <input type="text" id="fname" name="fname" onblur="fnameValidation();" placeholder="at least two chara.."><span id="fnameFeed"></span><br>
@@ -127,6 +167,7 @@
         <input type="text" id="lname" name="lname" onblur="lnameValidation();" placeholder="at least two chara.."><span id="lnameFeed"></span><br>
         <label for="psw">Enter your password:</label><br>
         <input type="password" id="psw" name="password" onblur="pswValidation();"placeholder="Vishal#mau@kj456"><span id="pswFeed" ></span><br>
+        <input type="password" id="psw1" name="password1" onblur="psw1Validation();" placeholder="re-enter the password"><span id="psw1Feed"></span>
         <label for="num">Enter your number:</label><br>
         <input type="number" id="num" name="number" onblur="numValidation();" placeholder="only 10 digits"><span id="numFeed"></span><br>
         <label for="date">Enter your DOB:</label><br>
@@ -134,7 +175,7 @@
         <label for="email">Enter email:</label><br>
         <input type="text" id="email" name="email" onblur="emailValidation();" placeholder="vishal@gmail.com" ><span id="emailFeed" ></span><br>
         
-        <button type="button" >submit:</button>
+        <button type="submit" >submit:</button>
        
         
        
